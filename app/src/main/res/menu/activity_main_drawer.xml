@@ -8,6 +8,17 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_classroom"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_classroom"/>
+
+        <item
+            android:id="@+id/nav_law"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_law"/>
+
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
@@ -20,17 +31,10 @@
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_map"/>
-        <item
-            android:id="@+id/nav_classroom"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_classroom"/>
+
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_about"/>
-        <item
-            android:id="@+id/nav_law"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_law"/>
     </group>
 </menu>
