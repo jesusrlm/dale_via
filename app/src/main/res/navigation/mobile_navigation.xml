@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_about"/>
 
     <fragment
-        android:id="@+id/nav_classroom"
-        android:name="com.fiai.dalevia.ui.about.AboutFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_classroom" />
-
-    <fragment
         android:id="@+id/nav_gallery"
         android:name="com.fiai.dalevia.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
@@ -30,21 +24,26 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.fiai.dalevia.ui.share.ShareFragment"
+        android:id="@+id/nav_classroom"
+        android:name="com.fiai.dalevia.ui.classroom.ClassRoomFragment"
         android:label="@string/menu_classroom"
         tools:layout="@layout/fragment_law" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.fiai.dalevia.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_map"
+        android:name="com.fiai.dalevia.ui.map.MapFragment"
         android:label="@string/menu_map"
         tools:layout="@layout/fragment_map" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.fiai.dalevia.ui.tools.ToolsFragment"
+        android:id="@+id/nav_test"
+        android:name="com.fiai.dalevia.ui.test.TestFragment"
         android:label="@string/menu_test"
         tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/nav_law"
+        android:name="com.fiai.dalevia.ui.law.LawFragment"
+        android:label="@string/menu_law"
+        tools:layout="@layout/fragment_law"/>
 
 </navigation>
