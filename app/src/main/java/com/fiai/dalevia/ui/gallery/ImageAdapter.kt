@@ -1,40 +1,36 @@
 package com.fiai.dalevia.ui.gallery
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
 import com.fiai.dalevia.R
+import kotlinx.android.synthetic.main.recyclerview_row.view.*
 
-class ImageAdapter(private val mContext: Context) : PagerAdapter() {
+class MainAdapter : RecyclerView.Adapter<CustomViewHolder>(){
+    val videoTitles = listOf("First title", "Second", "3rd", "Moore Title")
 
-    companion object{
-        val mImagerArry = arrayOf(R.drawable.im0,R.drawable.img2,R.drawable.img4)
+    //number of item
+    override fun getItemCount(): Int {
+        return videoTitles.size
     }
 
-    override fun isViewFromObject(view: View, any: Any): Boolean {
-        return view == any
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
+        //create view
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val cellForRow = layoutInflater.inflate(R.layout.recyclerview_row, parent, false)
+        return CustomViewHolder(cellForRow)
     }
 
-    override fun getCount(): Int {
-        return mImagerArry.size
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+        val videoTitle = videoTitles.get(position)
+        holder?.view?.photo_title.text= videoTitle
     }
+}
 
-    override fun instantiateItem(container: ViewGroup, position: Int): Any {
-
-        val mImageView = ImageView(mContext)
-
-        mImageView.scaleType = ImageView.ScaleType.CENTER_CROP
-
-        mImageView.setImageResource(mImagerArry[position])
-
-        container.addView(mImageView, 0)
-
-        return mImageView
-    }
-
-    override fun destroyItem(container: ViewGroup, position: Int, any : Any) {
-        container.removeView(any as View?)
-    }
+class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view){
+    val video_title= view.photo_title
 }
