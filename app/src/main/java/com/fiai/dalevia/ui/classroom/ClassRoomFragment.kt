@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.fiai.dalevia.R
+import kotlinx.android.synthetic.main.fragment_classroom.view.*
 
 
 class ClassRoomFragment : Fragment() {
@@ -19,4 +20,5 @@ class ClassRoomFragment : Fragment() {
 
         return root
     }
+
 }
