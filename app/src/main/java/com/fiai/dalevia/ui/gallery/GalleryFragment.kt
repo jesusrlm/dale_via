@@ -25,7 +25,6 @@ class GalleryFragment : Fragment() {
         photo?.add(Photo( "hola" , R.drawable.img1 ))
 
         lista= rootView.findViewById(R.id.rviewgallery)
-        layoutManager= LinearLayoutManager(this)
         adaptador = CustomAdapter(photo!!)
         return rootView
     }
